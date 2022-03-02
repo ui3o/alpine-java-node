@@ -20,10 +20,6 @@ if [ $BOOT_GITREPO ]; then
 
     # remove old repo and links
     rm -rf $BOOT_GITREPO_PATH
-    if [ $CONTAINER_DEBUG ]; then
-        find /bin/ -xtype l -exec echo rm broken symlink {} \;
-    fi
-    find /bin/ -xtype l -delete
 
     ## link all executable to /bin
     git clone $BOOT_GITREPO
