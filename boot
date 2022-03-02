@@ -21,12 +21,9 @@ if [ $BOOT_GITREPO ]; then
     # remove old repo and links
     rm -rf $BOOT_GITREPO_PATH
 
-    ## link all executable to /bin
+    ## setup boot repo
     git clone $BOOT_GITREPO
-    if [ $CONTAINER_DEBUG ]; then
-        find $BOOT_GITREPO_PATH/ -type f -not -path '*/\.git/*' -executable -exec echo 'link {}' \;
-    fi
-    find $BOOT_GITREPO_PATH/ -type f -not -path '*/\.git/*' -executable -exec sh -c 'f={}&&ln -s {} /bin/${f##*/}' \;
+    export PATH=${BOOT_GITREPO_PATH}:${PATH}
 fi
 
 if [ $JAVA_VERSION -a $JAVA_VERSION == 8 ]; then
