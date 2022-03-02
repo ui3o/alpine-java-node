@@ -12,8 +12,7 @@ if [ $BOOT_GITREPO ]; then
     # BOOT_GITREPO path find
     cd /
     BOOT_GITREPO_PATH="${BOOT_GITREPO##*/}"
-    BOOT_GITREPO_PATH="${BOOT_GITREPO_PATH%%.git}"
-    BOOT_GITREPO_PATH=$(readlink -f $BOOT_GITREPO_PATH)
+    BOOT_GITREPO_PATH="/${BOOT_GITREPO_PATH%%.git}"
 
     ## export BOOT_GITREPO to /etc/bashrc
     grep -qF -- "export BOOT_GITREPO=$BOOT_GITREPO" "/etc/bashrc" || echo "BOOT_GITREPO=$BOOT_GITREPO" >> "/etc/bashrc"
