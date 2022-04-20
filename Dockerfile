@@ -1,7 +1,7 @@
 FROM alpine:latest
 LABEL authors="ui3o.com"
 
-RUN apk add bash wget git nodejs npm util-linux maven openjdk17 openjdk8 openjdk11
+RUN apk add coreutils bash wget git nodejs npm util-linux maven openjdk17 openjdk8 openjdk11
 
 # set jdk11 as default java
 ENV JAVA_HOME=/usr/lib/jvm/default-jvm
