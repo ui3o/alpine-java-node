@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.15.1
 LABEL authors="ui3o.com"
 
 RUN apk add coreutils bash wget curl git nodejs npm util-linux maven openjdk17 openjdk8 openjdk11
