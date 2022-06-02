@@ -4,6 +4,7 @@ Docker alpine image with openjdk8,11,17 and nodejs16
 
 Docker image with:
 
+* make
 * git
 * openjdk8
 * openjdk11
