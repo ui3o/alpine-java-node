@@ -1,4 +1,4 @@
-# alpine-java-node
+# alpine-java-node-go
 Docker alpine image with openjdk8,11,17 and nodejs16
 
 
@@ -9,6 +9,7 @@ Docker image with:
 * openjdk11
 * openjdk17
 * nodejs16
+* go1.18
 * gitlab-release-note-generator package from https://github.com/jk1z/gitlab-release-note-generator
 
 
